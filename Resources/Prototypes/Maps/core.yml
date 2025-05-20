@@ -2,7 +2,7 @@
   id: Core
   mapName: 'Core'
   mapPath: /Maps/core.yml
-  minPlayers: 35
+  minPlayers: 30
   maxPlayers: 70
   stations:
     Core:
@@ -55,6 +55,7 @@
             Lawyer: [ 1, 1 ]
             SecurityCadet: [ 1, 1 ] #intern, not counted
             Detective: [ 1, 1 ]
+            PermaPrisoner: [ 1, 0 ] # HARMONY
             #supply (5)
             CargoTechnician: [ 3, 3 ]
             SalvageSpecialist: [ 2, 2 ]

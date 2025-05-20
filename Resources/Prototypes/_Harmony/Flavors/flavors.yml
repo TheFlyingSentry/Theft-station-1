@@ -1,0 +1,9 @@
+- type: flavor
+  id: themojave
+  flavorType: Complex
+  description: flavor-complex-themojave
+
+- type: flavor
+  id: regret
+  flavorType: Complex
+  description: flavor-complex-regret

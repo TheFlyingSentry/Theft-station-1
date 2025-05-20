@@ -6,13 +6,15 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobCargoTechnician
-      time: 18000 #5 hrs
+      time: 0 #0 hrs
     - !type:RoleTimeRequirement
       role: JobSalvageSpecialist
-      time: 9000 #2.5 hrs
+      time: 0 #0 hrs
     - !type:DepartmentTimeRequirement
       department: Cargo
-      time: 36000 #10 hours
+      time: 28800 #8 hours
+    - !type:OverallPlaytimeRequirement
+      time: 43200 #12 hrs
   weight: 10
   startingGear: QuartermasterGear
   icon: "JobIconQuarterMaster"

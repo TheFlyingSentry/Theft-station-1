@@ -18,12 +18,14 @@ using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Server.CrewManifest;
 
 namespace Content.Server.Cargo.Systems
 {
     public sealed partial class CargoSystem
     {
         [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
+        [Dependency] private readonly CrewManifestSystem _crewManifest = default!;
         [Dependency] private readonly EmagSystem _emag = default!;
         [Dependency] private readonly IGameTiming _timing = default!;
 
@@ -414,6 +416,8 @@ namespace Content.Server.Cargo.Systems
 
             if (_uiSystem.HasUi(consoleUid, CargoConsoleUiKey.Orders))
             {
+                // Harmony change -- crewManifest added for cargo orders QoL (Crew list)
+                var (_, crewManifest) = _crewManifest.GetCrewManifest(station.Value);
                 _uiSystem.SetUiState(consoleUid,
                     CargoConsoleUiKey.Orders,
                     new CargoConsoleInterfaceState(
@@ -421,7 +425,8 @@ namespace Content.Server.Cargo.Systems
                     GetOutstandingOrderCount(orderDatabase, console.Account),
                     orderDatabase.Capacity,
                     GetNetEntity(station.Value),
-                    orderDatabase.Orders[console.Account]
+                    orderDatabase.Orders[console.Account],
+                    crewManifest
                 ));
             }
         }

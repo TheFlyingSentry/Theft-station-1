@@ -175,13 +175,17 @@
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
     fireRate: 1
+    # Start of Harmony change
+    soundGunshot:
+      path: /Audio/_Harmony/Weapons/Guns/Gunshots/kammerer_shot.ogg
+    # End of Harmony change
   - type: Tag
     tags:
     - WeaponShotgunKammerer
 
 - type: entity
   name: sawn-off shotgun
-  parent: [ BaseWeaponShotgun, BaseSecurityBartenderContraband ]
+  parent: [BaseWeaponShotgun, BaseMajorContraband] #Harmony Change: Space ATF -- Adds Major Contraband tag to Sawn-Off
   id: WeaponShotgunSawn
   description: Groovy! Uses .50 shotgun shells.
   components: # needs to be super inaccurate because you don't need to wield it

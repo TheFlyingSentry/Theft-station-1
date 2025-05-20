@@ -169,6 +169,7 @@
     - id: CargoRequestEngineeringComputerCircuitboard
     - id: RCD
     - id: RCDAmmo
+    - id: RPD # Harmony Change: Add RPD to locker before upstream implimentation
     - id: RubberStampCE
 
 # Hardsuit table, used for suit storage as well
@@ -216,7 +217,8 @@
     - id: BoxEncryptionKeyMedical
     - id: ClothingBackpackDuffelSurgeryFilled
     - id: ClothingCloakCmo
-    - id: ClothingEyesHudMedical
+    - id: ClothingEyesGlassesMedical # Harmony item
+  # - id: ClothingEyesHudMedical
     - id: ClothingHandsGlovesNitrile
     - id: ClothingHeadHatBeretCmo
     - id: ClothingHeadsetAltMedical
