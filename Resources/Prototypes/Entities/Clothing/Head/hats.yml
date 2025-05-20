@@ -22,6 +22,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - HamsterWearable
     - WhitelistChameleon
 
@@ -40,9 +41,9 @@
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable    
     - WhitelistChameleon
 
-#Harmony Change: Updated Pathing for security resprite update
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretSecurity
@@ -50,12 +51,13 @@
   description: A stylish clothing option for security officers.
   components:
   - type: Sprite
-    sprite: _Harmony/Clothing/Head/Hats/beret_security.rsi
+    sprite: Clothing/Head/Hats/beret_security.rsi
   - type: Clothing
-    sprite: _Harmony/Clothing/Head/Hats/beret_security.rsi
+    sprite: Clothing/Head/Hats/beret_security.rsi
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - HamsterWearable
     - WhitelistChameleon
 
@@ -88,44 +90,37 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretRND
-  name: senior researcher's beret # Harmony Change: Renamed the Scientific Beret to better fit the jumpsuit name
+  name: scientific beret
   description: A beret for real scientists.
   components:
   - type: Sprite
-# Start of Harmony Change: Updated Sprite pathing
-#   sprite: Clothing/Head/Hats/beret_rnd.rsi
-    sprite: _Harmony/Clothing/Head/Hats/beret_rnd.rsi
+    sprite: Clothing/Head/Hats/beret_rnd.rsi
   - type: Clothing
-#   sprite: Clothing/Head/Hats/beret_rnd.rsi
-    sprite: _Harmony/Clothing/Head/Hats/beret_rnd.rsi
-# End of Change
+    sprite: Clothing/Head/Hats/beret_rnd.rsi
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - HamsterWearable
     - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretEngineering
-  name: senior engineer's beret # Harmony Change: Renamed the Engineering Beret to better fit the jumpsuit name
+  name: engineering beret
   description: A beret with the engineering insignia emblazoned on it. For engineers that are more inclined towards style than safety.
   components:
   - type: Sprite
-# Start of Harmony Change: Updated Sprite pathing
-#   sprite: Clothing/Head/Hats/beret_engineering.rsi
-    sprite: _Harmony/Clothing/Head/Hats/beret_engineering.rsi
+    sprite: Clothing/Head/Hats/beret_engineering.rsi
   - type: Clothing
-#   sprite: Clothing/Head/Hats/beret_engineering.rsi
-    sprite: _Harmony/Clothing/Head/Hats/beret_engineering.rsi
-# End of Change
+    sprite: Clothing/Head/Hats/beret_engineering.rsi
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - HamsterWearable
     - WhitelistChameleon
 
-# Harmony Change: Updated Sprite Pathing for Head of Staff Beret Update
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretQM
@@ -133,12 +128,13 @@
   description: A beret with the cargo's insignia emblazoned on it. For quartermasters that are more inclined towards style.
   components:
   - type: Sprite
-    sprite: _Harmony/Clothing/Head/Hats/beret_qm.rsi
+    sprite: Clothing/Head/Hats/beret_qm.rsi
   - type: Clothing
-    sprite: _Harmony/Clothing/Head/Hats/beret_qm.rsi
+    sprite: Clothing/Head/Hats/beret_qm.rsi
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - HamsterWearable
     - WhitelistChameleon
 
@@ -155,6 +151,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - HamsterWearable
     - WhitelistChameleon
 
@@ -172,32 +169,24 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretSeniorPhysician
-  name: senior physician's beret # Harmony Change: Renamed the Physician Beret to better fit the jumpsuit name
+  name: physician beret
   description: Donning the colours of medical and chemistry, physicians are the pride of this department!
   components:
   - type: Sprite
-# Start of Harmony Change: Updated Sprite pathing
-#  sprite: Clothing/Head/Hats/beret_physician.rsi
-    sprite: _Harmony/Clothing/Head/Hats/beret_physician.rsi
+    sprite: Clothing/Head/Hats/beret_physician.rsi
   - type: Clothing
-#  sprite: Clothing/Head/Hats/beret_physician.rsi
-    sprite: _Harmony/Clothing/Head/Hats/beret_physician.rsi
-# End of Change
+    sprite: Clothing/Head/Hats/beret_physician.rsi
 
 - type: entity
-  parent: [ClothingHeadBase, BaseSecurityContraband] # Harmony Change: Updated Contraband Level
+  parent: ClothingHeadBase
   id: ClothingHeadHatBeretBrigmedic
-  name: brigmedic beret # Harmony Change: Updated Name
+  name: brigmedical beret
   description: White beret, looks like a cream pie on the head.
   components:
   - type: Sprite
-# Start of Harmony Change: Updates Sprite Pathing
-#   sprite: Clothing/Head/Hats/beret_brigmedic.rsi
-    sprite: _Harmony/Clothing/Head/Hats/beret_brigmedic.rsi
+    sprite: Clothing/Head/Hats/beret_brigmedic.rsi
   - type: Clothing
-#   sprite: Clothing/Head/Hats/beret_brigmedic.rsi
-    sprite: _Harmony/Clothing/Head/Hats/beret_brigmedic.rsi
-# End of Change
+    sprite: Clothing/Head/Hats/beret_brigmedic.rsi
 
 - type: entity
   parent: [ ClothingHeadBase ]
@@ -250,6 +239,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - HamsterWearable
     - WhitelistChameleon
 
@@ -306,6 +296,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - HamsterWearable
     - WhitelistChameleon
 
@@ -315,14 +306,14 @@
   name: brown fedora
   description: It's a brown fedora.
   components:
-  # Harmony Change: Sprites updated for use in detective clothing update
   - type: Sprite
-    sprite: _Harmony/Clothing/Head/Hats/brownfedora.rsi
+    sprite: Clothing/Head/Hats/brownfedora.rsi
   - type: Clothing
-    sprite: _Harmony/Clothing/Head/Hats/brownfedora.rsi
+    sprite: Clothing/Head/Hats/brownfedora.rsi
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - HamsterWearable
     - WhitelistChameleon
 
@@ -332,11 +323,10 @@
   name: grey fedora
   description: It's a grey fedora.
   components:
-  # Harmony Change: Sprites updated for us in detective clothing update
   - type: Sprite
-    sprite: _Harmony/Clothing/Head/Hats/greyfedora.rsi
+    sprite: Clothing/Head/Hats/greyfedora.rsi
   - type: Clothing
-    sprite: _Harmony/Clothing/Head/Hats/greyfedora.rsi
+    sprite: Clothing/Head/Hats/greyfedora.rsi
 
 - type: entity
   parent: ClothingHeadBase
@@ -356,12 +346,13 @@
   description: A grand, stylish head of personnel's cap.
   components:
   - type: Sprite
-    sprite: _Harmony/Clothing/Head/Hats/hopcap.rsi # Harmony change. Resprite
+    sprite: Clothing/Head/Hats/hopcap.rsi
   - type: Clothing
-    sprite: _Harmony/Clothing/Head/Hats/hopcap.rsi # Harmony change. Resprite
+    sprite: Clothing/Head/Hats/hopcap.rsi
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - HamsterWearable
     - WhitelistChameleon
 
@@ -378,6 +369,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - HamsterWearable
     - WhitelistChameleon
 
@@ -439,11 +431,12 @@
     tags:
     - WhitelistChameleon
     - ClothMade
+    - Recyclable
   - type: HideLayerClothing
-    slots:
-    - Hair
-    - HeadTop
-    - HeadSide
+    layers:
+      Hair: HEAD
+      HeadTop : HEAD
+      HeadSide : HEAD
 
 - type: entity
   parent: ClothingHeadHatWizardBase
@@ -465,6 +458,12 @@
   - type: Clothing
     sprite: Clothing/Head/Hats/santahat.rsi
   - type: Appearance
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+      HeadTop : HEAD
+      HeadSide : HEAD
+    slots: []
   - type: Foldable
     canFoldInsideContainer: true
   - type: FoldableClothing
@@ -478,7 +477,8 @@
     - state: icon-nobeard
       map: [ "foldedLayer" ]
       visible: true
-
+  
+    
 
 - type: entity
   parent: ClothingHeadBase
@@ -506,8 +506,14 @@
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+      HeadTop : HEAD
+      HeadSide : HEAD
 
 - type: entity
   parent: ClothingHeadBase
@@ -519,6 +525,11 @@
     sprite: Clothing/Head/Hats/surgcap_green.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/surgcap_green.rsi
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+      HeadTop : HEAD
+      HeadSide : HEAD
 
 - type: entity
   parent: ClothingHeadBase
@@ -530,6 +541,12 @@
     sprite: Clothing/Head/Hats/surgcap_purple.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/surgcap_purple.rsi
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+      HeadTop : HEAD
+      HeadSide : HEAD
+
 
 - type: entity
   parent: ClothingHeadBase
@@ -544,6 +561,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - HamsterWearable
     - WhitelistChameleon
 
@@ -621,7 +639,6 @@
   - type: Clothing
     sprite: Clothing/Head/Hats/violetwizard.rsi
 
-#Harmony Change: Updated Pathing for security resprite update
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatWarden
@@ -629,9 +646,9 @@
   description: A police officer's Hat. This hat emphasizes that you are THE LAW
   components:
   - type: Sprite
-    sprite: _Harmony/Clothing/Head/Hats/warden.rsi
+    sprite: Clothing/Head/Hats/warden.rsi
   - type: Clothing
-    sprite: _Harmony/Clothing/Head/Hats/warden.rsi
+    sprite: Clothing/Head/Hats/warden.rsi
   - type: StealTarget
     stealGroup: ClothingHeadHatWarden
 
@@ -650,6 +667,7 @@
     tags:
     - WhitelistChameleon
     - ClothMade
+    - Recyclable
   - type: HideLayerClothing
     slots:
     - Hair
@@ -664,6 +682,11 @@
     sprite: Clothing/Head/Hats/wizard_fake.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/wizard_fake.rsi
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+      HeadTop : HEAD
+      HeadSide : HEAD
 
 - type: entity
   abstract: true
@@ -685,6 +708,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - HamsterWearable
     - WhitelistChameleon
 
@@ -720,6 +744,11 @@
     sprite: Clothing/Head/Hats/pyjamasyndicateblack.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/pyjamasyndicateblack.rsi
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+      HeadTop : HEAD
+      HeadSide : HEAD
 
 - type: entity
   parent: [ ClothingHeadBase, BaseSyndicateContraband ]
@@ -731,6 +760,11 @@
     sprite: Clothing/Head/Hats/pyjamasyndicatepink.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/pyjamasyndicatepink.rsi
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+      HeadTop : HEAD
+      HeadSide : HEAD
 
 - type: entity
   parent: [ ClothingHeadBase, BaseSyndicateContraband ]
@@ -742,6 +776,11 @@
     sprite: Clothing/Head/Hats/pyjamasyndicatered.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/pyjamasyndicatered.rsi
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+      HeadTop : HEAD
+      HeadSide : HEAD
 
 - type: entity
   parent: ClothingHeadBase
@@ -754,6 +793,11 @@
   - type: Clothing
     sprite: Clothing/Head/Hats/papersack.rsi
   - type: IdentityBlocker
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+      HeadTop : HEAD
+      HeadSide : HEAD
 
 - type: entity
   parent: ClothingHeadBase
@@ -766,6 +810,11 @@
   - type: Clothing
     sprite: Clothing/Head/Hats/papersacksmile.rsi
   - type: IdentityBlocker
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+      HeadTop : HEAD
+      HeadSide : HEAD
 
 - type: entity
   parent: ClothingHeadBase
@@ -802,6 +851,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - HamsterWearable
     - WhitelistChameleon
 
@@ -815,6 +865,11 @@
     sprite: Clothing/Head/Hats/rasta.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/rasta.rsi
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+      HeadTop : HEAD
+      HeadSide : HEAD
 
 - type: entity
   parent: ClothingHeadBase
@@ -846,6 +901,11 @@
       sprite: Clothing/Head/Hats/jester2.rsi
     - type: Clothing
       sprite: Clothing/Head/Hats/jester2.rsi
+    - type: HideLayerClothing
+      layers:
+        Hair: HEAD
+        HeadTop : HEAD
+        HeadSide : HEAD
 
 - type: entity
   parent: [ClothingHeadBase, BaseCommandContraband]
@@ -860,6 +920,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - HamsterWearable
     - WhitelistChameleon
 
@@ -997,6 +1058,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - WhitelistChameleon
     - HamsterWearable
   - type: SentienceTarget
@@ -1019,6 +1081,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable
     - WhitelistChameleon
     - HamsterWearable
 
@@ -1032,6 +1095,11 @@
     sprite: Clothing/Head/Hats/gladiator.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/gladiator.rsi
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+      HeadTop : HEAD
+      HeadSide : HEAD
 
 - type: entity
   parent: ClothingHeadBase
@@ -1225,7 +1293,6 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
 
-# Harmony change: Updates Sprite Pathing for Inter-Departmental Berets Update
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretMedic
@@ -1233,13 +1300,9 @@
   description: White beret that encourages you to be clean.
   components:
   - type: Sprite
-# Start of Harmony Change: Updated Sprite pathing
-#   sprite: Clothing/Head/Hats/beret_medic.rsi
-    sprite: _Harmony/Clothing/Head/Hats/beret_medic.rsi
+    sprite: Clothing/Head/Hats/beret_medic.rsi
   - type: Clothing
-#   sprite: Clothing/Head/Hats/beret_medic.rsi
-    sprite: _Harmony/Clothing/Head/Hats/beret_medic.rsi
-# End of Change
+    sprite: Clothing/Head/Hats/beret_medic.rsi
 
 - type: entity
   parent: ClothingHeadBase

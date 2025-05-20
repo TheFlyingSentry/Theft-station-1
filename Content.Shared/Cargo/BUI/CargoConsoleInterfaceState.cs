@@ -1,5 +1,6 @@
+using Content.Shared.Cargo.Prototypes;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
-using Content.Shared.CrewManifest;
 
 namespace Content.Shared.Cargo.BUI;
 
@@ -11,16 +12,15 @@ public sealed class CargoConsoleInterfaceState : BoundUserInterfaceState
     public int Capacity;
     public NetEntity Station;
     public List<CargoOrderData> Orders;
-    public CrewManifestEntries? CrewManifest;
+    public List<ProtoId<CargoProductPrototype>> Products;
 
-    // Harmony change -- crewManifest added for cargo orders QoL (Crew list)
-    public CargoConsoleInterfaceState(string name, int count, int capacity, NetEntity station, List<CargoOrderData> orders, CrewManifestEntries? crewManifest)
+    public CargoConsoleInterfaceState(string name, int count, int capacity, NetEntity station, List<CargoOrderData> orders, List<ProtoId<CargoProductPrototype>> products)
     {
         Name = name;
         Count = count;
         Capacity = capacity;
         Station = station;
         Orders = orders;
-        CrewManifest = crewManifest;
+        Products = products;
     }
 }

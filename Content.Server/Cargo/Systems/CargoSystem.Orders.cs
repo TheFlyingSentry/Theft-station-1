@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using Content.Server.Cargo.Components;
 using Content.Server.Station.Components;
 using Content.Shared.Cargo;
@@ -18,14 +19,12 @@ using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
-using Content.Server.CrewManifest;
 
 namespace Content.Server.Cargo.Systems
 {
     public sealed partial class CargoSystem
     {
         [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
-        [Dependency] private readonly CrewManifestSystem _crewManifest = default!;
         [Dependency] private readonly EmagSystem _emag = default!;
         [Dependency] private readonly IGameTiming _timing = default!;
 
@@ -374,7 +373,7 @@ namespace Content.Server.Cargo.Systems
                 return;
             }
 
-            if (!component.AllowedGroups.Contains(product.Group))
+            if (!GetAvailableProducts((uid, component)).Contains(args.CargoProductId))
                 return;
 
             if (component.SlipPrinter)
@@ -416,8 +415,6 @@ namespace Content.Server.Cargo.Systems
 
             if (_uiSystem.HasUi(consoleUid, CargoConsoleUiKey.Orders))
             {
-                // Harmony change -- crewManifest added for cargo orders QoL (Crew list)
-                var (_, crewManifest) = _crewManifest.GetCrewManifest(station.Value);
                 _uiSystem.SetUiState(consoleUid,
                     CargoConsoleUiKey.Orders,
                     new CargoConsoleInterfaceState(
@@ -426,7 +423,7 @@ namespace Content.Server.Cargo.Systems
                     orderDatabase.Capacity,
                     GetNetEntity(station.Value),
                     orderDatabase.Orders[console.Account],
-                    crewManifest
+                    GetAvailableProducts((consoleUid, console))
                 ));
             }
         }
@@ -620,6 +617,29 @@ namespace Content.Server.Cargo.Systems
 
             return true;
 
+        }
+
+        public List<ProtoId<CargoProductPrototype>> GetAvailableProducts(Entity<CargoOrderConsoleComponent> ent)
+        {
+            if (_station.GetOwningStation(ent) is not { } station ||
+                !TryComp<StationCargoOrderDatabaseComponent>(station, out var db))
+            {
+                return new List<ProtoId<CargoProductPrototype>>();
+            }
+
+            var products = new List<ProtoId<CargoProductPrototype>>();
+
+            // Note that a market must be both on the station and on the console to be available.
+            var markets = ent.Comp.AllowedGroups.Intersect(db.Markets).ToList();
+            foreach (var product in _protoMan.EnumeratePrototypes<CargoProductPrototype>())
+            {
+                if (!markets.Contains(product.Group))
+                    continue;
+
+                products.Add(product.ID);
+            }
+
+            return products;
         }
 
         #region Station
